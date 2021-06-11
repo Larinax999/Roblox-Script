@@ -1,0 +1,11 @@
+--[[
+if getconnections then
+  for i,v in pairs(getconnections(game:GetService("ScriptContext").Error)) do
+    v:Disable()
+  end
+end
+]]--
+if game.GameId == 6405808840 then
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/Larinax999/larinahub/main/Recovery.lua'), true))()
+    return
+end
