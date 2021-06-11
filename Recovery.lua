@@ -64,17 +64,25 @@ section1:addToggle("ESP", nil, function(value)
     end
 end)
 section1:addButton("tp to Gear", function()
-    for i, v in pairs(game:GetService("Workspace"):GetChildren()) do
+for i, v in pairs(game:GetService("Workspace"):GetChildren()) do
     if v.DataCost == 43 then
-        local plr1 = game.Players.LocalPlayer.Character
-        plr1.HumanoidRootPart.CFrame = v.Handle.CFrame * CFrame.new(0,2,0)
-        break
+        if v.Handle.MeshId == "rbxassetid://2284623510" then
+            local plr1 = game.Players.LocalPlayer.Character
+            plr1.HumanoidRootPart.CFrame = v.Handle.CFrame
+            break
+        end
     end
 end
 end)
 section1:addButton("tp to lift", function()
     local plr1 = game.Players.LocalPlayer.Character
-    plr1.HumanoidRootPart.CFrame = CFrame.new(-682, -110.69989, 18.9999695, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+    for i,v in pairs(game:GetService("Workspace").Map.Zone3.Lift:GetChildren()) do
+        if (v.DataCost == 1930) then
+            plr1.HumanoidRootPart.CFrame = v.Elevator.Part.CFrame * CFrame.new(0,2,0)
+            print("Found Lift")
+            break
+        end
+    end
 end)
 
 -- load
