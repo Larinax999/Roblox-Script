@@ -5,7 +5,14 @@ if getconnections then
   end
 end
 ]]--
-if game.GameId == 6405808840 then
+
+if game.GameId == 2381301193 then
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/Larinax999/larinahub/main/Recovery.lua'), true))()
+    return
+end
+
+
+if game.GameId == 2516044547 then
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/Larinax999/larinahub/main/ZO-WIP.lua'), true))()
     return
 end
