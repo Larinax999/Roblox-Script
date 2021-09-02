@@ -9,6 +9,7 @@ end
 
 local main_page = serv:Channel("working all game")
 local etc_page = serv:Channel("working some game")
+local bf_page = serv:Channel("Blox Fruit")
 local dev_page = serv:Channel("dev tool")
 
 main_page:Button("infiniteyield", function()
@@ -39,14 +40,21 @@ _G.key = "POLAR_IS_THE_BEST"
 loadstring(game:HttpGet("https://polarhub.xyz/PolarFreeScript.lua"))()
 end)
 
+bf_page:Button("evil hub", function()
+non()
+https://raw.githubusercontent.com/Natthawat69/EvilHub-FREE/main/Script.lua
+end)
+
 dev_page:Button("SimpleSpy (syn x only)", function()
 non()
-loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Natthawat69/EvilHub-FREE/main/Script.lua"))()
 end)
 
 dev_page:Button("rejoin", function()
 non()
 game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
 end)
+
+
 
 serv:Channel("by larina#9999")
