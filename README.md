@@ -10,3 +10,8 @@ Discord : Larina#9999
 ```
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Larinax999/larinahub/main/init", true))()
 ```
+
+# loadstring hub
+```
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Larinax999/larinahub/main/loadstring_hub.lua", true))()
+```
