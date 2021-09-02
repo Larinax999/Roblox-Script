@@ -42,7 +42,7 @@ end)
 
 bf_page:Button("evil hub", function()
 non()
-https://raw.githubusercontent.com/Natthawat69/EvilHub-FREE/main/Script.lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Natthawat69/EvilHub-FREE/main/Script.lua"))()
 end)
 
 dev_page:Button("SimpleSpy (syn x only)", function()
