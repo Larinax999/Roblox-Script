@@ -47,7 +47,7 @@ end)
 
 dev_page:Button("SimpleSpy (syn x only)", function()
 non()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Natthawat69/EvilHub-FREE/main/Script.lua"))()
+loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
 end)
 
 dev_page:Button("rejoin", function()
