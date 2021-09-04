@@ -6,12 +6,14 @@ Discord : Larina#9999
 - [ZOぞ [WIP]](https://www.roblox.com/games/6678877691/ZO-WIP)
 - [Recovery](https://www.roblox.com/games/6405808840/Recovery)
 
+
 # loadstring
+
+## larina hub
 ```
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Larinax999/larinahub/main/init", true))()
 ```
-
-# loadstring hub
+## loadstring hub
 ```
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Larinax999/larinahub/main/loadstring_hub.lua", true))()
 ```
