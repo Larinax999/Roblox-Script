@@ -1,0 +1,190 @@
+-- init discord lib
+local DiscordLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt"),true))()
+local win = DiscordLib:Window("larina hub")
+
+-- create main server
+local main_serv = win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")
+
+-- create etc. server
+local reco_serv = nil
+local zow_serv = nil
+local sg_serv = nil
+
+local reco_name = "Recovery"
+local zow_name = "ZOぞ [WIP]"
+local sg_name = "Squid Game"
+
+-- make func 
+function non(msg)
+	msg = msg or "Hold on a sec"
+	DiscordLib:Notification("loader", msg, "Okay!")
+end
+
+function tp(x,y,z) 
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,z)
+end
+
+-- add channel to main server
+local ch_ls_m = main_serv:Channel("loadstring")
+main_serv:Channel("by larina#9999")
+
+-- -- add channel to main server
+ch_ls_m:Button(reco_name, function()
+	if reco_serv ~= nil then
+		return non(reco_name .. " already loaded")
+	else 
+		non()
+	end
+	reco_serv = win:Server(reco_name, "")
+end)
+
+ch_ls_m:Button(zow_name, function()
+	if zow_serv ~= nil then
+		return non(zow_name .. " already loaded")
+	else 
+		non()
+	end
+	zow_serv = win:Server(zow_name, "")
+end)
+
+ch_ls_m:Button(sg_name, function()
+	if sg_serv ~= nil then
+		return non(sg_name .. " already loaded")
+	else 
+		non()
+	end
+	sg_serv = win:Server(sg_name, "")
+	local sound_func = {}
+	for _,v in pairs(game:GetService("Workspace"):GetChildren()) do 
+		if v.Name == "Sound player" then
+			sound_func[v.Music.SoundId:gsub("rbxassetid://","")] = v
+		end
+	end
+	function play(id) 
+		fireclickdetector(sound_func[id].play.ClickDetector, 9999999)
+	end
+	
+	local ch_sp_sg = sg_serv:Channel("soundpad")
+	local ch_tp_sg = sg_serv:Channel("teleport")
+	local ch_m_sg = sg_serv:Channel("misc")
+	-- load soundpad buttons
+	ch_sp_sg:Label("all")
+	ch_sp_sg:Button("play all sound", function() 
+		for i,_ in pairs(sound_func) do
+			play(i)
+		end
+	end)
+	ch_sp_sg:Button("stop play all sound", function() 
+		for _,v in pairs(sound_func) do
+			fireclickdetector(v.Stop.ClickDetector, 9999999)
+		end
+	end)
+	ch_sp_sg:Label("lobby")
+	ch_sp_sg:Button("Lights out", function() 
+		play("6748183323")
+	end)
+	ch_sp_sg:Button("Main lobby music", function() 
+		play("7522200252")
+	end)
+	ch_sp_sg:Button("soundtrack 1", function() 
+		play("7502926978")
+	end)
+	ch_sp_sg:Button("soundtrack 2", function() 
+		play("7522184587")
+	end)
+	ch_sp_sg:Button("soundtrack 3", function() 
+		play("7522185901")
+	end)
+	
+	ch_sp_sg:Label("game 1")
+	ch_sp_sg:Button("intro", function() 
+		play("7503696371")
+	end)
+	ch_sp_sg:Button("repeat of rules", function() 
+		play("7503702840")
+	end)
+	ch_sp_sg:Button("game begin", function() 
+		play("7503751540")
+	end)
+	ch_sp_sg:Button("green light", function() 
+		play("7503753348")
+	end)
+	ch_sp_sg:Button("red light", function() 
+		play("7504104307")
+	end)
+	ch_sp_sg:Button("finish line", function() 
+		play("7503750618")
+	end)
+	
+	ch_sp_sg:Label("game 5")
+	ch_sp_sg:Button("intro", function() 
+		play("7515918276")
+	end)
+	ch_sp_sg:Button("take of shoes", function() 
+		play("7515936755")
+	end)
+	
+	ch_tp_sg:Button("lobby", function() 
+		tp(-97.73942565918,32.192016601563,-237.31004333496)
+	end)
+	ch_tp_sg:Button("game hall", function() 
+		tp(-24.775323867798,37.216121673584,-9.3393297195435)
+	end)
+	ch_tp_sg:Button("guard hall", function() 
+		tp(24.13452911377,37.331581115723,124.78861999512)
+	end)
+	
+	ch_tp_sg:Button("game 1/1", function() 
+		tp(94.350921630859,78.223922729492,20.752044677734)
+	end)
+	ch_tp_sg:Button("game 1/2", function() 
+		tp(420.01794433594,78.219909667969,30.501310348511)
+	end)
+	
+	ch_tp_sg:Button("game 2", function() 
+		tp(-42.008861541748,105.60157775879,111.92627716064)
+	end)
+	
+	ch_tp_sg:Button("game 5 lobby", function() 
+		tp(-142.68765258789,101.17008209229,36.403831481934)
+	end)
+	ch_tp_sg:Button("game 5/1", function() 
+		tp(-260.17880249023,119.99779510498,109.13780212402)
+	end)
+	ch_tp_sg:Button("game 5/2", function() 
+		tp(-469.22085571289,120.29117584229,109.43059539795)
+	end)
+	
+	ch_m_sg:Button("open/close all door (guard room) (!!Beta!!)", function() 
+		for _,v in pairs(game:GetService("Workspace"):GetChildren()) do
+			if v.DataCost == 71168 then
+				print(v.DataCost)
+				for _,vv in pairs(v:GetChildren()) do
+					if vv.DataCost == 11404 then
+						 for _,vvv in pairs(vv:GetChildren()) do
+							if vvv.DataCost == 131 then
+								fireclickdetector(vvv.Handle.ClickDetector, 9999999)
+							end
+							if vvv.DataCost == 5642 then
+								for _,vvvv in pairs(vvv:GetChildren()) do
+									if vvvv.DataCost == 131 then
+										fireclickdetector(vvvv.Handle.ClickDetector, 9999999)
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end)
+	ch_m_sg:Button("active event game 2 (!!Beta!!)", function() 
+		for _,v in pairs(game:GetService("Workspace"):GetChildren()) do
+			if v.Name == "" then
+				pcall(function()
+					fireclickdetector(v.Head.ClickDetector,999999)
+				end)
+			end 
+		end
+	end)
+end)
