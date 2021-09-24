@@ -5,6 +5,7 @@ Discord : Larina#9999
 # game
 - [ZOぞ [WIP]](https://www.roblox.com/games/6678877691/ZO-WIP)
 - [Recovery](https://www.roblox.com/games/6405808840/Recovery)
+- [Squid Game](https://www.roblox.com/games/7502447797/)
 
 
 # loadstring
