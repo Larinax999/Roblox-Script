@@ -33,6 +33,11 @@ non()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Paphawin130/Tannyhub/main/TannyHub.lua"))()
 end)
 
+etc_page:Button("larina hub", function()
+non()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Larinax999/larinahub/main/init", true))()
+end)
+
 etc_page:Button("polar hub", function()
 non()
 _G.key = "POLAR_IS_THE_BEST"
