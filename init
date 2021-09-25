@@ -156,6 +156,7 @@ ch_ls_m:Button(sg_name, function()
 	end)
 	
 	ch_m_sg:Button("open/close all door (guard room) (!!Beta!!)", function() 
+		return non("fixing")
 		for _,v in pairs(game:GetService("Workspace"):GetChildren()) do
 			if v.DataCost == 71168 then
 				print(v.DataCost)
@@ -179,6 +180,16 @@ ch_ls_m:Button(sg_name, function()
 		end
 	end)
 	ch_m_sg:Button("active event game 2 (!!Beta!!)", function() 
+		for _,v in pairs(game:GetService("Workspace"):GetChildren()) do
+			if v.Name == "" then
+				pcall(function()
+					fireclickdetector(v.Head.ClickDetector,999999)
+				end)
+			end 
+		end
+	end)
+	
+	ch_m_sg:Button("wear guard shirt", function() 
 		for _,v in pairs(game:GetService("Workspace"):GetChildren()) do
 			if v.Name == "" then
 				pcall(function()
